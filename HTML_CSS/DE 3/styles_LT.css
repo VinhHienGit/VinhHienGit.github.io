@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: hevaltica, sans-serif;
+	font-size: .6875em;
+  background: #121214;
+}
+div#container {
+    padding: 26px 25px;
+    margin: 0 auto;
+    width: 1000px;
+}
+.page-left {
+    width: 460px;
+    float: left;
+}
+.page-right {
+    float: left;
+    background: #232227;
+    width: 190px;
+    height: 300px;
+    padding: 30px 20px 20px 20px;
+    margin-left: 30px;
+}
+.page-right h4 {
+	color: white;
+  padding-right: 2px;
+}
+p.float-left {
+	float: left;
+}
+.page-right img {
+  padding: 25px 10px 25px 5px;
+}
+.page-right p {
+	color: #6b6360;
+  padding-left: 2px;
+}
+.title {
+    color: #6b6360;
+    margin-left: 30px;
+}
+.post {
+  margin-left: 30px;
+  padding: 30px 3px 30px 0;
+}
+.more-info a {
+	-webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 0;
+}
+.more-info a:before {
+	content: url(img/more_info.gif);
+	float: left;
+	margin-right: 4px;
+	margin-top: 1px;
+}
+.content {
+	border-bottom: 1px dotted #3f3f41;
+	padding: 13px 1px;
+}
+.content img {
+	float: left;
+	width: 150px;
+	height: 100px;
+	padding: 0 20px 20px 0;
+}
+p#title{
+  color: #f3f4f3;
+  padding-right: 2px;
+  margin-top: 0;
+}
+.content p {
+  margin-top: 25px;
+  color: #6b6360;
+  padding-left: 2px;
+}
+.content:after {
+	content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+p#post-2 {
+	margin-top: 0;
+	height: 30px;
+}
+.post ul {
+	float: left;
+	width: 50%;
+	list-style: none;
+	margin-bottom: 10px;
+}
+.post ul li a {
+	-webkit-text-decoration: underline;
+  -moz-text-decoration: underline;
+  -ms-text-decoration: underline;
+  -o-text-decoration: underline;
+  text-decoration: underline;
+  color: #7c7c85;
+  padding-left: 10px;
+}
+.post ul li:before {
+  content: "";
+  border-color: rgba(107,76,76,0) #838080;
+  border-style: solid;
+  border-width: .35em 0 .35em .45em;
+  display: block;
+  top: .9em;
+  position: relative;
+}
+
