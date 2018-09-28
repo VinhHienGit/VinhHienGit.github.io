@@ -120,10 +120,12 @@ body {
 	width: 135px;
 	height: 16px;
 }
-td#textarea {
+.tdtext {
+}
+.tdtext textarea {
   width: 410px;
   height: 75px;
-  padding-left: 3px;
+  padding: 3px;
   font-family: Time New Roman;
   font-weight: 900;
   color: #434343;
