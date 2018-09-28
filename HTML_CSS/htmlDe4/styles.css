@@ -3,12 +3,12 @@
 	padding: 0;
 }
 body {
-	font-family: Time New Roman, sans-serif;
+	font-family: Courier New, sans-serif;
 	font-size: 10px;
 	background: white;
 }
 h3 {
-	font-family: Time New Roman, serif;
+	font-family: Courier New, serif;
 }
 main#main {
   background: #e6f3fb;
@@ -31,5 +31,23 @@ main#main {
   width: 155px;
   height: 80px;
   border: 1px solid #c9c9c9;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
-.
+.bloroll__content__title {
+	padding: 5px;
+	margin-top: 5px;
+	color: #0a6395;
+}
+.blogrol__content__p {
+	padding: 5px;
+}
+.blogroll__content_list {
+	list-style: none;
+	padding: 0 -5px;
+}
+.blogroll__content_list li {
+	padding: 10px;
+	background: 
+}
+
