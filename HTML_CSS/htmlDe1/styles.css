@@ -14,7 +14,6 @@ body {
 }
 .profile__title {
   background: url(img/title_bg.gif) repeat-x;
-  height: 25px;
   line-height: 1.6;
   font-size: 16px;
   padding-left: 4px;
@@ -37,7 +36,6 @@ body {
   width: 100%;
   height: 106px;
   overflow: scroll;
-  overflow-color: #46a527;
 }
 .profile__info__list {
   list-style: none;
@@ -125,6 +123,7 @@ body {
 td#textarea {
   width: 410px;
   height: 75px;
+  padding-left: 3px;
   font-family: Time New Roman;
   font-weight: 900;
   color: #434343;
