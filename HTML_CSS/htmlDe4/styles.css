@@ -1,0 +1,35 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+body {
+	font-family: Time New Roman, sans-serif;
+	font-size: 10px;
+	background: white;
+}
+h3 {
+	font-family: Time New Roman, serif;
+}
+main#main {
+  background: #e6f3fb;
+	color: black;
+	width: 320px;
+	height: 730px;
+	padding: 5px 10px;
+  margin-top: 15px; 
+}
+.blogroll {
+  background: #ffffff;
+  padding: 5px;
+  border-top: 4px solid #f7a418;
+}
+.blogroll__content {
+	padding-bottom: 5px;
+}
+.blogroll__content__img {
+	float: left;
+  width: 155px;
+  height: 80px;
+  border: 1px solid #c9c9c9;
+}
+.
