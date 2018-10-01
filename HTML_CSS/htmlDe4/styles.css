@@ -3,51 +3,201 @@
 	padding: 0;
 }
 body {
-	font-family: Courier New, sans-serif;
-	font-size: 10px;
+	font-family: Coda, sans-serif;
+	font-size: 13px;
+	line-height: 1.4;
 	background: white;
 }
 h3 {
-	font-family: Courier New, serif;
+	font-family: Georgia, serif;
 }
 main#main {
   background: #e6f3fb;
 	color: black;
-	width: 320px;
-	height: 730px;
-	padding: 5px 10px;
-  margin-top: 15px; 
+	width: 300px;
+	padding: 10px 9px;
+  margin-top: 15px;
 }
 .blogroll {
+	display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
   background: #ffffff;
   padding: 5px;
+  padding-bottom: 0;
   border-top: 4px solid #f7a418;
+}
+.blogroll:after {
+	content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
 }
 .blogroll__content {
 	padding-bottom: 5px;
+}
+.blogroll__content__box{
+	height: 95px;
+	padding: 5px 0 5px 5px;
 }
 .blogroll__content__img {
 	float: left;
   width: 155px;
   height: 80px;
   border: 1px solid #c9c9c9;
-  margin-right: 5px;
-  margin-bottom: 10px;
+  margin-right: 10px;
 }
-.bloroll__content__title {
-	padding: 5px;
-	margin-top: 5px;
+.blogroll__content__title {
 	color: #0a6395;
 }
-.blogrol__content__p {
+.blogroll__content__p {
+}
+.blogroll__content__list {
+	list-style: none;
+	margin: -5px -5px;
+}
+.blogroll__content__list li {
+	padding: 10px;
+	background: #f9f1c2;
+	border-bottom: 1px solid #ffffff;
+}
+.blogroll__content__list li p {
+	color: #0a6395;
+}
+.blogroll__content__list li p span {
+	font-weight: bold;
+}
+.horoscope {
+	display: block;
+  background: #ffffff;
+  padding: 5px;
+  padding-bottom: 0;
+  border-top: 4px solid #f7a418;
+  font-size: 10.7px;
+  margin-bottom: 15px;
+}
+.horospoce:after {
+	content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.horoscope__content {
 	padding: 5px;
 }
-.blogroll__content_list {
-	list-style: none;
-	padding: 0 -5px;
+.horoscope__content__img {
+	float: left;
+	width: 100px;
+	height: 100px;
+	padding: 1px;
 }
-.blogroll__content_list li {
-	padding: 10px;
-	background: 
+.horoscope__content__box {
+	float: left;
+	width: 175px;
+	height: 145px;
+	margin-right: -5px;
 }
+.horoscope__content__title {
+	margin-top: 15px;
+	font-family: Coda, serif;
+}
+p#date {
+	font-size: 10px;
+	color: gray;
+}
+.horoscope__content__p {
+	margin-top: 10px;
+}
+.horoscope__content__p__a {
 
+}
+.horoscope__by {
+	display: inline-block;
+	position: relative;
+	background: #f4f4ec;
+	width: 299px;
+	height: 47px;
+	margin: 10px 0 -5px -10px;/*
+	margin-top: 10px;
+	margin-left: -10px;
+	margin-bottom: -5px;*/
+}
+.horoscope__by__p {
+	padding: 10px 0 0 20px;
+}
+a.horoscope__by__a {
+	-webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
+  text-decoration: none;
+  font-weight: bold;
+	padding-left: 20px;
+}
+.horoscope__by__img {
+	position: absolute;
+	right: -1px;
+	bottom: 0;
+  width: 70px;
+  height: 47px;
+}
+.news {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  background: #ffffff;
+  padding-bottom: 0;
+  border-top: 4px solid #f7a418;
+}
+.news__content {
+	position: relative;
+	font-family: Time New Roman, serif;
+	font-size: 11px;
+}
+.news__content__p {
+  padding: 20px 30px 10px 25px;
+}
+.news__content__a {
+  -webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
+  text-decoration: none;
+	padding-left: 25px;
+}
+.news__content__img {
+	float: right;
+  width: 125px;
+  height: 115px;
+}
+.news__content:after {
+ clear: both;
+}
+.competion {
+	border-top: 1px solid gray;
+	padding-top: 5px;
+}
+.competion__box {
+	border: 1px solid gray;
+	background: #ffffff;
+	padding: 9px;
+	font-family: Time New Roman, serif;
+  font-size: 11.5px;
+}
+.competion__list {
+	list-style: none;
+}
+.competion__box li a{
+  -webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
+  text-decoration: none;
+  color: gray;
+}
