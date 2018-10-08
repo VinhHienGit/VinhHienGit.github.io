@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.main {
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 18px;
+	background-color: #d8d7d7;
+}
+.textbox {
+	margin-left: 30px;
+  font-family: arial;
+}
+.textbox__input {
+	width: 200px;
+	padding: 2px;
+}
+.textbox__button {
+	margin-left: 20px;
+	width: 35px;
+	height: 25px;
+}
+.list-product {
+	margin-top: 10px;
+  counter-reset: count;
+  list-style: none;
+  padding-left: 20px;
+}
+.list-product li {
+	margin-top: 5px;
+	background-color: white;
+  margin-left: 10px;
+  position: relative;
+  padding: 10px;
+}
+.list-product li p:before {
+	counter-increment: count;
+  content: counter(count);
+  color: #BDBDBD;
+  border: 1px solid #BDBDBD;
+  border-radius: 100%;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+.list-product li button {
+	font-family: Time New Roman;
+	vertical-align: middle;
+	color: white;
+	margin-top: 1px;
+	width: 20px;
+	float: right;
+	margin-right: 10px;
+	clear: both;
+	background-color: red;
+	border: none;
+}
