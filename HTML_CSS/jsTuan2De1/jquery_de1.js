@@ -7,7 +7,7 @@ $(document).ready(function() {
           $("#addName").focus();
         }
         else {
-          alert("Input product name.")
+          alert("Input product name.");
         }
     });
     $(document).on('click', '#btn-remove', function () {
