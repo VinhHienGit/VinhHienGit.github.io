@@ -56,7 +56,7 @@ $(document).ready(function() {
 		// Show popup detail 2
 		btn_detail2.click(function(event) {
 			/* Show popup2*/
-			popup1.show().animate({top:"50"}, "345")
+			popup2.show().animate({top:"50"}, "345")
 		});
     popupClose.click(function(event) {
     	/* Close this popup */
