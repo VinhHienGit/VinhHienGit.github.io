@@ -13,6 +13,8 @@
 	margin-left: 30px;
   font-family: arial;
 }
+.textbox input {
+}
 .textbox__input {
 	width: 200px;
 	padding: 2px;

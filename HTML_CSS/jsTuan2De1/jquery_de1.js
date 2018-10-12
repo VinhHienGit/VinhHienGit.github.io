@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $(".js-textbox_input").attr('maxlength', '30');
     $("#btn-add").click(function(){
     	  var inputName = $("#addName").val().trim();
         if (inputName != "") {
