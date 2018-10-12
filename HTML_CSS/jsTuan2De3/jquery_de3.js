@@ -14,7 +14,7 @@ function pointer(event) {
 function multiClick() {
 	// setTimeOut
 	pointer("none");
-	setTimeout(pointer("auto"), 456);
+	setTimeout(pointer("auto"), 567);
 }
 function thumbnailOpacity() {
 	// set opacity for thumbnail

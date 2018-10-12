@@ -51,15 +51,18 @@ $(document).ready(function() {
 		// Show popup detail 1
 		btn_detail1.click(function(event) {
 			/* Show popup1 */
+			pointer("auto");
       popup1.show().animate({top:"50"}, "345")
 		});
 		// Show popup detail 2
 		btn_detail2.click(function(event) {
 			/* Show popup2*/
+			pointer("auto");
 			popup2.show().animate({top:"50"}, "345")
 		});
     popupClose.click(function(event) {
     	/* Close this popup */
       $(this).parent().hide().animate({top: "-400"}, "1");
+      pointer("none");
     });
 });
