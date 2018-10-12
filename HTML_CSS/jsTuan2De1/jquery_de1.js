@@ -1,17 +1,17 @@
 $(document).ready(function() {
-    $(".js-textbox_input").attr('maxlength', '30');
-    $(".js-btn-add").click(function(){
-    	  var inputName = $(".js-textbox_input").val().trim();
+    $(".js-name").attr('maxlength', '30');
+    $(".js-add").click(function(){
+        var inputName = $(".js-name").val().trim();
         if (inputName != "") {
-          $("ol").append('<li><button class=".js-btn-remove">X</button><p>'+inputName+"</p></li>");
-          $(".js-textbox_input").val("");
-          $(".js-textbox_input").focus();
+          $("ol").append('<li><button id="btn-remove">X</button><p>'+inputName+"</p></li>");
+          $(".js-name").val("");
+          $(".js-name").focus();
         }
         else {
           alert("Input product name.");
         }
     });
-    $(document).on('click', '.js-btn-remove', function () {
-		    $(this).parent().remove();
-	})
+    $(document).on('click', '#btn-remove', function () {
+        $(this).parent().remove();
+  })
 });
