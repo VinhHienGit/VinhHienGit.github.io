@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.main {
+	position: relative;
+  margin: 0 auto;
+  width: 900px;
+  height: 600px;
+  background-image: url("img/bg_main.jpg");
+  background-size: cover;
+}
+.arrow_left {
+	position: absolute;
+  top: 250px;
+  left: 70px;
+  cursor: pointer;
+}
+.arrow_right {
+	position: absolute;
+  top: 250px;
+  right: 70px;
+  cursor: pointer;
+}
+.slides {
+	position: absolute;
+  top: 90px;
+  left: 130px;
+  width: 648px;
+  height: 500px;
+  overflow: hidden;
+}
+.slides__show {
+	list-style: none;
+	position: absolute;
+  display: flex;
+  overflow: hidden;
+}
+.slides__thumbnail {
+	list-style: none;
+	position: absolute;
+	top: 340px;
+	left: 20px;
+  display: flex;
+}
+.slides__thumbnail li {
+	margin-left: 10px;
+}
