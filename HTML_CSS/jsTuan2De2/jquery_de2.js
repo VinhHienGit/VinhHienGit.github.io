@@ -14,9 +14,11 @@ $(document).ready(function() {
 		popup2.hide();
 		var popupClose = $(".js-popup__button-close");
 // set pointer
-		function pointer(str) {
-        flipOff.css("pointer-events", str);
-        flipOn.css("pointer-events", str);
+		function pointer(event) {
+        flipOff.css("pointer-events", event);
+        flipOn.css("pointer-events", event);
+        btn_detail2.css("pointer-events", event);
+        btn_detail1.css("pointer-events", event);
     }
     // Set 
     function multiClick() {
@@ -51,18 +53,18 @@ $(document).ready(function() {
 		// Show popup detail 1
 		btn_detail1.click(function(event) {
 			/* Show popup1 */
-			pointer("auto");
+			pointer('none');
       popup1.show().animate({top:"50"}, "345")
 		});
 		// Show popup detail 2
 		btn_detail2.click(function(event) {
 			/* Show popup2*/
-			pointer("auto");
+			pointer('none');
 			popup2.show().animate({top:"50"}, "345")
 		});
     popupClose.click(function(event) {
     	/* Close this popup */
       $(this).parent().hide().animate({top: "-400"}, "1");
-      pointer("none");
+      pointer('auto');
     });
 });
