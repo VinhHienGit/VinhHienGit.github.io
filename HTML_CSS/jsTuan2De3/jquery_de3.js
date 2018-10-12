@@ -84,11 +84,7 @@ $(document).ready(function() {
         change thumbnail opacity
         run slide animatioin auto*/
         clearInterval(interval);
-        if ($(this).index() !== 0) {
-          distance = -648 * ($(this).index() - 1);
-        } else {
-          distance = 648;
-        }
+        distance = -648 * ($(this).index() - 1);
         slidesAnimation();
         thumbnailOpacity();
         multiClick();
