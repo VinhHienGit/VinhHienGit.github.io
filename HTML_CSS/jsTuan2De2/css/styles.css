@@ -4,17 +4,22 @@
 }
 .main {
 	position: relative;
-	width: 350px;
+	width: 120%;
+	max-width: 350px;
 	padding: 20px;
 	margin: 0 auto;
 	font-size: 18px;
 	background-color: white;
 }
+.main img {
+	width: 100%;
+	height: auto;
+}
 .menu {
 	display:inline-block;
 	margin-top: 10px;
   list-style: none;
-  width: 270px;
+  width: px;
 }
 .menu li {
 	position: relative;
