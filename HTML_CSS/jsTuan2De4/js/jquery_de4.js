@@ -46,6 +46,24 @@ $(document).ready(function() {
     menuTitle();
     let interval = slidesAnimationAuto();
 
+    function backMenu(speed) {
+         // body...
+        clearInterval(interval);
+        if (distance === 0) {
+        distance = -320 * (menu_slide.children().length - 2);
+        } else {
+         distance += 640;
+        }
+        slidesAnimation(speed);
+        interval = slidesAnimationAuto();
+    }
+    function nextMenu(speed) {
+      // body...
+        clearInterval(interval);
+        slidesAnimation(speed);
+        interval = slidesAnimationAuto();
+    }
+
     arrow_left.click(function() {
     	/*clear interval slide animation auto
     	  set pointer-event and timeOut
@@ -53,14 +71,7 @@ $(document).ready(function() {
     	  show slide
     	  change thumbnail opacity
     	  run slide animatioin auto*/
-    	  clearInterval(interval);
-        if (distance === 0) {
-          distance = -320 * (menu_slide.children().length - 2);
-        } else {
-          distance += 640;
-        }
-        slidesAnimation(300);
-        interval = slidesAnimationAuto();
+    	  backMenu(200);
     });
 
     arrow_right.click(function() {
@@ -69,9 +80,7 @@ $(document).ready(function() {
     	  show slide
     	  change thumbnail opacity
     	  run slide animatioin auto*/
-    	  clearInterval(interval);
-        slidesAnimation(100);
-        interval = slidesAnimationAuto();
+    	  nextMenu(200);
     });
 
     menu_title.click(function() {
@@ -91,5 +100,15 @@ $(document).ready(function() {
         menu_title.css('pointer-events', 'auto');
         title.css('pointer-events', 'none');
         event.stopPropagation();
+    });
+
+    menu_slide.on('swipeleft', function() {
+    	/* Act on the event */
+      nextMenu(200);
+    });
+
+    menu_slide.on('swiperight', function() {
+    	/* Act on the event */
+      backMenu(200);
     });
 });
