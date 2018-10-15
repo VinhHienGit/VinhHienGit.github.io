@@ -4,7 +4,8 @@
 }
 .main {
 	position: relative;
-	width: 270px;
+	width: 350px;
+	padding: 20px;
 	margin: 0 auto;
 	font-size: 18px;
 	background-color: white;
@@ -43,7 +44,7 @@
 }
 .menu li:nth-child(even) button {
 	margin-left: 23%;
-	background-image: url("img/btn_detail.png");
+	background-image: url("../img/btn_detail.png");
 	width: 141px;
 	height: 26px;
 	background-size: cover;
