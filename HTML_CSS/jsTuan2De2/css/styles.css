@@ -15,7 +15,6 @@
 	margin-top: 10px;
   list-style: none;
   width: 270px;
-  left: 7%;
 }
 .menu li {
 	position: relative;
@@ -56,7 +55,7 @@
   line-height: 1;
   top: -400px;
   left: 2%;
-  width: 240px;
+  width: 270px;
   padding: 5px;
   border: 2px solid #a37e23;
   background: #FFF;
