@@ -8,14 +8,14 @@
 	max-width: 350px;
 	padding: 20px;
 	margin: 0 auto;
-	font-size: 16px;
+	font-size: 10vw;
 	background-color: white;
 }
 .menu {
 	display:inline-block;
 	margin-top: 10px;
   list-style: none;
-  width: px;
+  width: 100%;
 }
 .menu li {
 	position: relative;
@@ -44,6 +44,7 @@
 }
 .menu li:nth-child(even) button {
 	margin-left: 23%;
+	bottom: 10%;
 	background-image: url("../img/btn_detail.png");
 	width: 141px;
 	height: 26px;
