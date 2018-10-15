@@ -20,8 +20,8 @@
 	position: relative;
 }
 .flip {
-  width: 270px;
-  height: 40px;
+  width: 100%;
+  height: auto;
 }
 .menu li:nth-child(odd) {
   pointer-events: stroke;
