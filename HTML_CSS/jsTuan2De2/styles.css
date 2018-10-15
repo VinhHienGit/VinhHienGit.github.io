@@ -64,8 +64,8 @@
 .popup h2 {
 	text-align: center;
 }
-.popup img {
-	width: 270px;
+.popup__img {
+	width: 250px;
 }
 .popup__button-close {
 	position: absolute;
