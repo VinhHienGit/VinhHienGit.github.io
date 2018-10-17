@@ -1,0 +1,32 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.chart {
+	width: 90%;
+	max-width: 800px;
+	margin: 10 auto;
+	font-size: 100%;
+}
+.chart__pie {
+	width: 100%;
+	height: 40%;
+	padding: 10px;
+	margin: 0 auto;
+}
+.chart__pie__canvas {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #d3d3d3;
+}
+.chart__column {
+	width: 100%;
+	height: 40%;
+	padding: 10px;
+	margin: 0 auto;
+}
+.chart__column__canvas {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #d3d3d3;
+}

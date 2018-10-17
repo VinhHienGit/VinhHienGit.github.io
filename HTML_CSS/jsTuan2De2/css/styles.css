@@ -4,7 +4,7 @@
 }
 .main {
 	position: relative;
-	width: 350px;
+	width: 290px;
 	margin: 0 auto;
 	padding: 10px;
 	font-size: 18px;
@@ -14,7 +14,7 @@
 	display:inline-block;
 	margin-top: 10px;
   list-style: none;
-  width: 270px;
+  width: 100%;
   left: 7%;
 }
 .menu li {
