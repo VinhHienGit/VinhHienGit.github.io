@@ -3,7 +3,6 @@ const PI = Math.PI;
 const scaleX = 1;
 const scaleY = 0.5;
 var pie_chart = $("#js-pie_chart").get(0);
-var column_chart = $("#js-column_chart");
 var pieX = Math.floor(pie_chart.width/2);
 var pieY = Math.floor(pie_chart.height*1.3);
 var pieR = Math.floor(pie_chart.width/5);
@@ -12,7 +11,7 @@ var pieStartAngle = 0;
 
 function drawSlidePie(ctx, centerX, 
   centerY, radius, startAngle, endAngle, fillColor, strokeColor) {
-  // body...
+  // Draw slide pie chart
     ctx.beginPath();
     ctx.fillStyle = fillColor;
     ctx.moveTo(centerX,centerY);
@@ -24,7 +23,7 @@ function drawSlidePie(ctx, centerX,
 }
 
 function drawLineComment(ctx, texts, val, startAngle, endAngle, lineColor, textColor, left) {
-  // body...
+  // draw line comment
   var startLineX = pieX + (pieR/2)*Math.cos(startAngle + endAngle/2);
   var startLineY = pieY-pieZ + (pieR/2)*Math.sin(startAngle + endAngle/2);
   var midLineX = pieX + left*pieR;
@@ -49,14 +48,14 @@ function drawLineComment(ctx, texts, val, startAngle, endAngle, lineColor, textC
   ctx.stroke();
 }
 function drawTitle(ctx, titleTxt, textX, textY, titleColor) {
-  // body...
+  // draw title
   ctx.beginPath();
   ctx.fillStyle = titleColor;
   ctx.font = "14px Arial";
   ctx.fillText(titleTxt, textX, textY);
 }
 function pieChart(options) {
-  // body...
+  // pie chart
   var pixel =  window.devicePixelRatio || 1;
   this.options = options;
   this.canvas = options.canvas;
@@ -75,17 +74,28 @@ function pieChart(options) {
   var startAngle_reached = pieStartAngle;
   var endAngle_reached = (dataPie.reached/total_value)*(2*PI);
   var startAngle_notReached = endAngle_reached;
-  var endAngle_notReached = startAngle_notReached+(dataPie.notReached/total_value)*(2*PI);
+  var endAngle_notReached = startAngle_notReached+((dataPie.notReached/total_value)*(2*PI));
   for (var i = 0; i <= pieZ; i++) {
     drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_reached, endAngle_reached, colorPie.reached, colorPie.strokeReached);
-    drawSlidePie(this.ctx, pieX+2, pieY-2-[i], pieR, startAngle_notReached, endAngle_notReached, colorPie.notReached, colorPie.strokeNotReached);
+    drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_notReached, endAngle_notReached, colorPie.notReached, colorPie.strokeNotReached);
   }
   var val_reached = Math.floor(dataPie.reached*100/total_value);
   var val_notReached = Math.floor(dataPie.notReached*100/total_value);
   drawLineComment(this.ctx, textPie.reached, val_reached, startAngle_reached, endAngle_reached, colorPie.lineReached, colorPie.lable, -1);
-  drawLineComment(this.ctx, textPie.notReached, val_notReached,startAngle_notReached, PI/12, colorPie.lineNotReached, colorPie.lable, 1);
+  if(val_notReached<=20) {
+    drawLineComment(this.ctx, textPie.notReached, val_notReached,startAngle_notReached, 2*endAngle_notReached +PI/12, colorPie.lineNotReached, colorPie.lable, 1);
+  }
+  else {
+    if(val_notReached<=5) {
+      drawLineComment(this.ctx, textPie.notReached, val_notReached,startAngle_notReached, endAngle_notReached, colorPie.lineNotReached, colorPie.lable, 1);
+    }
+    else {
+      drawLineComment(this.ctx, textPie.notReached, val_notReached,startAngle_notReached, endAngle_notReached - PI, colorPie.lineNotReached, colorPie.lable, 1);
+    }
+  }
   drawTitle(this.ctx, textPie.title, pieX/10, Math.floor(pieY*1.5), colorPie.title)
 }
+
 
 $(document).ready(function() {
   var myPieChart = new pieChart(
@@ -93,5 +103,9 @@ $(document).ready(function() {
       canvas: pie_chart,
       data: dataPie
     });
-
+  var myColumnChart = new columnChart(
+    {
+      canvas: column_chart
+    });
+  myColumnChart.draw();
 });
