@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<title>Vinh Hien JS3</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/jquery.validate.js"></script>
+</head>
+<body>
+<main class="info">
+	<form id="info__form">
+		<table class="info__form__table">
+			<tbody>
+				<tr>
+					<td>User name:</td>
+					<td>
+						<input type="text" name="userName" id="js-userName">
+					</td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td>
+						<input type="text" name="passWord" id="js-password">
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>
+						<input type="text" name="email" id="js-email">
+					</td>
+				</tr>
+				<tr>
+					<td>Birthday:</td>
+					<td style="position: relative;">
+						<input type="text" name="birthday" id="js-birthday">
+						<img class="icon_calender js-icon_calender" src="img/ico_calender.png">
+						<table class="calender js-calender">
+								<!-- row 1 -->
+								<tr>
+									<td>
+										<input class="calender__button js-calender__button_PreYear" type="button" value="&#8647;">
+									</td>
+									<td>
+										<input class="calender__button js-calender__button_PreMonth" type="button" value="&larr;">
+									</td>
+									<td colspan="2">
+										<select class="calender__select_month js-calender__select_month">
+										</select>
+									</td>
+									<td>
+										<select class="calender__select_year js-calender__select_year">
+										</select>
+									</td>
+									<td>
+										<input class="calender__button js-calender__button_NextMonth" type="button" value="&rarr;">
+									</td>
+									<td>
+										<input class="calender__button js-calender__button_NextYear" type="button" value="&#8649;">
+									</td>
+								</tr>
+								<!-- row 2 -->
+								<tr class="calender__DayOfWeek">
+									<td>Sun</td>
+									<td>Mon</td>
+									<td>Tue</td>
+									<td>Wed</td>
+									<td>Thu</td>
+									<td>Fri</td>
+									<td>Sat</td>
+								</tr>
+								<!-- row 3 -->
+								<tr>
+									<table class="calender__DayOfMonth js-calender__DayOfMonth">
+										<!-- Day of Month -->
+										<tr><td>1</td></tr>
+									</table>
+								</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="info__form__button info__form__button__submit js-info__form__button_submit" type="SUBMIT">SUBMIT</button>
+		<button class="info__form__button js-info__form__button_refresh" type="reset">REFRESH</button>
+	</form>
+	<script src="js/jquery_calender.js"></script>
+	<script src="js/jquery_formInfo.js"></script>
+  <script src="js/action.js"></script>
+</main>
+
+</body>
+</html>
