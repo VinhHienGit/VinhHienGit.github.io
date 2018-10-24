@@ -161,7 +161,7 @@ $(document).on('click', '.js-date', function(event) {
       selected_date = parseInt($.trim(this.innerText));
     }
     else {}
-  birthday.val($.trim( (selected_year +"/"+ parseInt(selected_month) +1) +"/"+ selected_date));
+  birthday.val($.trim(selected_year +"/"+ (parseInt(selected_month) +1)) +"/"+ selected_date);
   console.log(this.innerText);
   hide_calender();
 });
