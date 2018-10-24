@@ -76,10 +76,12 @@ function pieChart(options) {
   var endAngle_reached = (dataPie.reached/total_value)*(2*PI);
   var startAngle_notReached = endAngle_reached;
   var endAngle_notReached = startAngle_notReached+((dataPie.notReached/total_value)*(2*PI));
-  for (var i = 0; i <= pieZ; i++) {
-    drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_reached, endAngle_reached, colorPie.reached, colorPie.strokeReached);
-    drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_notReached, endAngle_notReached, colorPie.notReached, colorPie.strokeNotReached);
+  for (var i = 0; i < pieZ; i++) {
+    drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_reached, endAngle_reached, colorPie.strokeReached, colorPie.strokeReached);
+    drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_notReached, endAngle_notReached, colorPie.strokeNotReached, colorPie.strokeNotReached);
   }
+  drawSlidePie(this.ctx, pieX, pieY-pieZ, pieR, startAngle_reached, endAngle_reached, colorPie.reached, colorPie.strokeReached);
+  drawSlidePie(this.ctx, pieX, pieY-pieZ, pieR, startAngle_notReached, endAngle_notReached, colorPie.notReached, colorPie.strokeNotReached);
   var val_reached = Math.ceil(dataPie.reached*100/total_value);
   var val_notReached = Math.floor(dataPie.notReached*100/total_value);
   drawLineComment(this.ctx, textPie.reached, val_reached, startAngle_reached, endAngle_reached, colorPie.lineReached, colorPie.lable, -1);
