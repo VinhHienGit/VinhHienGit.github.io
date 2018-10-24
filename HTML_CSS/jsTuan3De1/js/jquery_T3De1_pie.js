@@ -67,8 +67,8 @@ function pieChart(options) {
   this.ctx.setTransform(pixel,0,0,pixel,0,0);
   this.ctx.scale(1,0.45);
   var total_value = 0;
-  for ( var item in this.options.data){
-    var val = this.options.data[item];
+  for ( var item = 0;item < this.options.data.lenght; item++){
+    var val = parseInt(this.options.data[item].val());
     total_value += val;
   }
   var startAngle_reached = pieStartAngle;
@@ -79,7 +79,7 @@ function pieChart(options) {
     drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_reached, endAngle_reached, colorPie.reached, colorPie.strokeReached);
     drawSlidePie(this.ctx, pieX, pieY-[i], pieR, startAngle_notReached, endAngle_notReached, colorPie.notReached, colorPie.strokeNotReached);
   }
-  var val_reached = Math.floor(dataPie.reached*100/total_value);
+  var val_reached = Math.ceil(dataPie.reached*100/total_value);
   var val_notReached = Math.floor(dataPie.notReached*100/total_value);
   drawLineComment(this.ctx, textPie.reached, val_reached, startAngle_reached, endAngle_reached, colorPie.lineReached, colorPie.lable, -1);
   if(val_notReached<=20) {

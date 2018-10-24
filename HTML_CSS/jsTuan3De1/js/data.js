@@ -1,6 +1,6 @@
 var dataPie = {
-	reached: 5,
-	notReached: 89,
+	reached: 80,
+	notReached: 20,
 };
 
 var colorPie = {
