@@ -67,10 +67,11 @@ function pieChart(options) {
   this.ctx.setTransform(pixel,0,0,pixel,0,0);
   this.ctx.scale(1,0.45);
   var total_value = 0;
-  for ( var item = 0;item < this.options.data.lenght; item++){
-    var val = parseInt(this.options.data[item].val());
+  for ( var item in this.options.data){
+    var val = this.options.data[item];
     total_value += val;
   }
+  console.log(total_value);
   var startAngle_reached = pieStartAngle;
   var endAngle_reached = (dataPie.reached/total_value)*(2*PI);
   var startAngle_notReached = endAngle_reached;
