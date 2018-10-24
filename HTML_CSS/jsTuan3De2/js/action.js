@@ -25,7 +25,7 @@ $(document).ready(function() {
       },
       birthday: {
         required: true,
-        date: true
+        dateISO: true
       },
     }, 
     messages: {
