@@ -75,9 +75,10 @@ function draw_chart(ctx) {
     if(columnHeight>0) {
       columnHeight = 0;
     }
-    else {
-      drawRect(ctx, chart_x, chart_y, columnWidth, columnHeight,columnChartSets.columnColor);
+    if(columnHeight < -4*distance_lever ){
+      columnHeight = -4*distance_lever;
     }
+    drawRect(ctx, chart_x, chart_y, columnWidth, columnHeight,columnChartSets.columnColor);
   }
 }
 function columnChart(options) {
