@@ -4,7 +4,7 @@ $(document).ready(function() {
   var count = 1;
   var move = 0;
 
-  //create 20 leaf images
+  //create 16 falling leaves images
   for (let i = 0; i < 16; i++) {
     count = Math.ceil(Math.random()*5);
     fallingLeaves.append("<img src='img/leaves" + count + ".png' class='falling_leaves" + i + "' alt='leaves" + count +"'>");
@@ -28,6 +28,6 @@ $(document).ready(function() {
       skewY: ySkew,
       rotation: 200,
     });
-    move = move < 15 ? ++move : 0;
+    move = move < 16 ? ++move : 0;
   }, 999);
 });
